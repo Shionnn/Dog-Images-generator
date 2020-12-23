@@ -1,0 +1,97 @@
+header{
+    color: rgb(72, 51, 29);
+    background-color: rgb(216, 155, 89);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.2);
+    position: relative;
+    font-family: 'Bangers', cursive;
+}
+
+#icon-left img{
+    position: absolute;
+    top:30px;
+    left:440px;
+    height: 70px;
+    width: 70px;
+    float:left;
+}
+
+#icon-right img{
+    position: absolute;
+    top:30px;
+    right:440px;
+    height: 70px;
+    width: 70px;
+    float:right;
+}
+
+#navbar{
+    height:70px;
+    width:700px;
+    border-radius: 5px;
+    margin:auto;
+}
+.d-flex{
+    margin:0px;
+}
+
+#search{
+    width:350px;
+}
+body{
+    position: relative;
+    height:1300px;
+    background-image: url("img/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+
+    
+}
+.page{
+    margin:10px;
+    display: flex;
+    flex-wrap:wrap;
+    
+}
+#dogs1{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+#dogs2{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+#dogs3{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.page img{
+    
+    width:450px;
+    height:450px;
+    margin:10px;
+}
+
+footer{
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    height:50px;
+    width: auto;
+    bottom:0;
+    background-color: rgb(216, 155, 89);
+    color: rgb(72, 51, 29);
+    position: fixed;
+}
+footer span{
+    margin: 10px;  
+}
+span:hover{
+    text-decoration: underline;
+}
