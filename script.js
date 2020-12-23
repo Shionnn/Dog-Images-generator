@@ -1,20 +1,21 @@
+//creating a tag element
 function createNode(element) {
   return document.createElement(element);
 }
-
+//append function
 function append(parent, el) {
 return parent.appendChild(el);
 }
-
+//function to make sure search isnt null
 function validateForm() {
   var x = document.getElementById('search').value;
   console.log(x)
   if (x == "" || x == null) {
-    alert("search must be filled out");
+    alert("Search bar cannot be empty!");
     return false;
   }
 }
-
+//function happens when submit button clicked
 document.getElementById('submitbtn').addEventListener('click', function thisfunction(){
 if ( document.getElementById('dogs1') != null){
   document.getElementById('dogs1').remove();
@@ -32,7 +33,7 @@ if (validateForm() != false){
     append(container,newdiv);
     console.log(container)
     console.log("page added")
-  
+    //fetching api
     for (var i = 0; i < 6; i++){
       let div = document.getElementById("dogs"+j)
       var breed = document.getElementById("search").value;
