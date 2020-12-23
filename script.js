@@ -43,24 +43,47 @@ if (validateForm() != false){
     console.log("page added")
     //fetching api
     for (var i = 0; i < 6; i++){
+      
       let div = document.getElementById("dogs"+j)
       var breed = document.getElementById("search").value;
       fetch('https://dog.ceo/api/breed/'+breed+'/images/random')
-      .then(response=>response.json())
+      .then(response=>{
+        if (response.ok) {
+        return response.json();
+      }
+      else {
+
+        throw new Error('Something went wrong');
+        
+      }
+      })
       .then(data=>{
         let results = data.message;
         let img = createNode('img');
         img.src = results;
         append(div, img);
         console.log("img added")
-      });
+      })
+      .catch((error)=>{
+        console.log(error)
+        window.stop();
+      })
+    
+      
+      
 
+
+     
+     
     }
+    
   }
+  
 }
 
 
 });
+
 
 // show the given page, hide the rest
 function show(elementID) {
@@ -81,11 +104,11 @@ function show(elementID) {
   ele.style.display = 'block';
 }
 
-fetch('https://dog.ceo/api/breeds/list/all')
-.then(respone=>response.json())
-.then(data=>{
-  let [results] = data.message;
-  return results.map(function(results){
+// fetch('https://dog.ceo/api/breeds/list/all')
+// .then(response=>response.json())
+// .then(data=>{
+//   let results = data.message;
+//   return [results].map(function(results){
 
-  })
-})
+//   })
+// })
