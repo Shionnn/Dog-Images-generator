@@ -15,6 +15,14 @@ function validateForm() {
     return false;
   }
 }
+
+//enter key for search to work
+document.getElementById('search').addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("submitbtn").click();
+  }
+});
 //function happens when submit button clicked
 document.getElementById('submitbtn').addEventListener('click', function thisfunction(){
 if ( document.getElementById('dogs1') != null){
@@ -72,3 +80,12 @@ function show(elementID) {
   // then show the requested page
   ele.style.display = 'block';
 }
+
+fetch('https://dog.ceo/api/breeds/list/all')
+.then(respone=>response.json())
+.then(data=>{
+  let [results] = data.message;
+  return results.map(function(results){
+
+  })
+})
