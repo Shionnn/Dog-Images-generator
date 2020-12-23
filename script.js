@@ -16,9 +16,12 @@ function validateForm() {
 }
 
 document.getElementById('submitbtn').addEventListener('click', function thisfunction(){
-// if ( document.getElementById('dogs') != null){
-//   document.getElementById('dogs').remove();
-// }
+if ( document.getElementById('dogs1') != null){
+  document.getElementById('dogs1').remove();
+  document.getElementById('dogs2').remove();
+  document.getElementById('dogs3').remove();
+  
+}
 
 
 if (validateForm() != false){
