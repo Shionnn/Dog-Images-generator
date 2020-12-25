@@ -53,7 +53,7 @@ if (validateForm() != false){
       }
       else {
 
-        throw new Error('Something went wrong');
+        alert("The breed you searched for is not available! Try again!")
         
       }
       })
@@ -70,11 +70,6 @@ if (validateForm() != false){
       })
     
       
-      
-
-
-     
-     
     }
     
   }
@@ -104,11 +99,24 @@ function show(elementID) {
   ele.style.display = 'block';
 }
 
-// fetch('https://dog.ceo/api/breeds/list/all')
-// .then(response=>response.json())
-// .then(data=>{
-//   let results = data.message;
-//   return [results].map(function(results){
+//retrieve api data and put into array for autocomplete function
+var array = []
+var i = 0;
 
-//   })
-// })
+
+fetch('https://dog.ceo/api/breeds/list/all')
+.then(response=>response.json())
+.then(data=>{
+  let results = data.message
+  for (var key in results) {
+    if (results.hasOwnProperty(key)) {
+        while (results[key][i] != undefined){
+          array.push(key + " " + results[key][i])
+          i++;
+        }
+        i = 0;
+        array.push(key)
+    }
+}
+console.log(array)
+  })
