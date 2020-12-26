@@ -14,17 +14,47 @@ header{
     top:30px;
     left:440px;
     height: 70px;
-    width: 70px;
-    float:left;
-}
 
+}
 #icon-right img{
     position: absolute;
     top:30px;
     right:440px;
     height: 70px;
     width: 70px;
-    float:right;
+
+}
+
+#dogrun-container-left{
+    position: absolute;
+    top:18px;
+    left: 100px;
+    height: 70px;
+    width: 70px;
+
+}
+#dogrun-container-right{
+    position: absolute;
+    top:18px;
+    right: 100px;
+    height: 70px;
+    width: 70px;
+    transform: scaleX(-1);
+
+}
+.dogrun{
+    background-color: white;
+    background-image: url("img/dogrun.gif");
+    background-position:25% 48% ;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    height: 170px;
+    width: 170px;   
+    border-style: solid;
+    border-radius: 100%;
+    border-width: 5px;
+    border-color: rgb(72, 51, 29);
+    
 }
 
 #navbar{
