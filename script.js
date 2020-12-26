@@ -80,24 +80,30 @@ if (validateForm() != false){
 
 });
 
-
+document.getElementById('Span1').style.textDecoration = "underline";
 // show the given page, hide the rest
-function show(elementID) {
+function show(elementID,spanID) {
   // try to find the requested page and alert if it's not found
   var ele = document.getElementById(elementID);
+  var span = document.getElementById(spanID)
   if (!ele) {
       alert("no such element");
       return;
   }
+  
 
   // get all pages, loop through them and hide them
   var pages = document.getElementsByClassName('page');
+  var spans = document.getElementsByClassName('span');
   for(var i = 0; i < pages.length; i++) {
       pages[i].style.display = 'none';
+      spans[i].style.textDecoration = 'none';
   }
 
   // then show the requested page
   ele.style.display = 'block';
+  span.style.textDecoration = "underline";
+
 }
 
 //retrieve api data and put into array for autocomplete function
