@@ -110,13 +110,19 @@ span:hover{
     border-top: none;
     z-index: 0;
     /*position the autocomplete items to be the same width as the container:*/
+    width:89%;
     top: 100%;
     left: 0;
     right: 0;
     overflow-y:scroll;
-    
     max-height: 300px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
+  .autocomplete-items::-webkit-scrollbar {
+    display: none;
+}
+
   .autocomplete-items div {
     padding: 10px;
     cursor: pointer;
