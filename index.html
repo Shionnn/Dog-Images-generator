@@ -11,7 +11,7 @@
 <body>
 
 
-
+<div id="bg-img"></div>
 <header class="display-1 text-center">
 <div id="icon-left"><img src="img/dogpaw.png"></div>
 <div>Dog Generator</div>
@@ -19,8 +19,10 @@
 <nav class="navbar navbar-light bg-light" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand">Search the dog by breed!</a>
-    <form class="d-flex">
+    <form autocomplete="off" class="d-flex">
+      <div class = "autocomplete"> 
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+      </div>
     </form>
     <button class="btn btn-outline-success" id="submitbtn">Search</button>
   </div>
