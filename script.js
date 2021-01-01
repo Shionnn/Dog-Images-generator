@@ -15,21 +15,20 @@ function validateForm() {
     return false;
   }
 }
-
 //enter key for search to work
-document.getElementById('search').addEventListener("keydown", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
+document.getElementById('search').addEventListener("keyup", function(e) {
+  if (e.keyCode == 13) {
    document.getElementById("submitbtn").click();
   }
 });
-//function happens when submit button clicked
+
+//function happens when submit button clicked and api fetching
 document.getElementById('submitbtn').addEventListener('click', function thisfunction(){
 if ( document.getElementById('dogs1') != null){
   document.getElementById('dogs1').remove();
   document.getElementById('dogs2').remove();
   document.getElementById('dogs3').remove();
-  
+  document.getElementsByTagName('iframe').remove();
 }
 
 
@@ -41,6 +40,8 @@ if (validateForm() != false){
     append(container,newdiv);
     console.log(container)
     console.log("page added")
+
+    
     //fetching api
     for (var i = 0; i < 6; i++){
       
@@ -76,7 +77,11 @@ if (validateForm() != false){
   }
   
 }
-
+const breed = document.getElementById("search").value;
+    forwiki = breed.replace(/\s/g,'_')
+    let iframe = createNode('iframe');
+    iframe.src = 'https://en.wikipedia.org/wiki/'+forwiki
+    append(container,iframe)
 
 });
 
@@ -130,7 +135,7 @@ function autocomplete(inp, arr) {
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function(e) {
+  inp.addEventListener("input", function() {
       var a, b, i, val = this.value;
       /*close any already open lists of autocompleted values*/
       closeAllLists();
@@ -184,10 +189,13 @@ function autocomplete(inp, arr) {
       } else if (e.keyCode == 13) {
         /*If the ENTER key is pressed, prevent the form from being submitted,*/
         e.preventDefault();
+        
         if (currentFocus > -1) {
           /*and simulate a click on the "active" item:*/
-          if (x) x[currentFocus].click();
+          x[currentFocus].click();
+
         }
+        
       }
   });
   function addActive(x) {
@@ -221,6 +229,7 @@ document.addEventListener("click", function (e) {
     closeAllLists(e.target);
 });
 }
+
 autocomplete(document.getElementById("search"), array);
   })
 
