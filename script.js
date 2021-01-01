@@ -28,7 +28,8 @@ if ( document.getElementById('dogs1') != null){
   document.getElementById('dogs1').remove();
   document.getElementById('dogs2').remove();
   document.getElementById('dogs3').remove();
-  document.getElementsByTagName('iframe').remove();
+  var frame = document.getElementById("iframe");
+  frame.parentNode.removeChild(frame);
 }
 
 
@@ -78,10 +79,18 @@ if (validateForm() != false){
   
 }
 const breed = document.getElementById("search").value;
-    forwiki = breed.replace(/\s/g,'_')
-    let iframe = createNode('iframe');
-    iframe.src = 'https://en.wikipedia.org/wiki/'+forwiki
-    append(container,iframe)
+if (breed == "african"){
+  forwiki = "african_wild_dog"
+}
+else{
+  forwiki = breed.replace(/\s/g,'_')
+}
+
+let iframe = createNode('iframe');
+iframe.src = 'https://en.wikipedia.org/wiki/'+forwiki
+iframe.id = "iframe"
+append(container,iframe)
+console.log(iframe)
 
 });
 
