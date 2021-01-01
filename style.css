@@ -244,6 +244,8 @@ color: #ffffff;
     header{
         font-size: 60px;
     }
-
+    .page{
+        min-height: 1500px;
+    }
 
 }
