@@ -82,13 +82,19 @@ const breed = document.getElementById("search").value;
 if (breed == "african"){
   forwiki = "african_wild_dog"
 }
+else if (breed == "australian"){
+  forwiki = "australian_shepherd"
+}
 else{
   forwiki = breed.replace(/\s/g,'_')
 }
-
+let para = createNode('p');
 let iframe = createNode('iframe');
 iframe.src = 'https://en.wikipedia.org/wiki/'+forwiki
+para.innerHTML = "More infomation on " + breed + " dogs"; 
+para.id = "doginfo"
 iframe.id = "iframe"
+append(container,para)
 append(container,iframe)
 console.log(iframe)
 

@@ -86,6 +86,7 @@ body{
     flex-wrap:wrap;
     margin-bottom:100px;
     
+    
 }
 #dogs1{
     display: flex;
@@ -120,9 +121,6 @@ footer{
     width: auto;
     background-color: rgb(216, 155, 89);
     color: rgb(72, 51, 29);
-    position: fixed;
-    bottom:0;
-    
 }
 footer span{
     margin: 10px;  
@@ -179,8 +177,29 @@ color: #ffffff;
 
 #iframe {
     margin:auto;
-    height:1500px;
-    width: 1500px;
+    height:900px;
+    width: 1400px;
     border:2px solid white;
+    display:block;
+}
+#doginfo {
+    display: block;
+    margin:auto;
+    text-align: center;
+    color: rgb(72, 51, 29);
+    font-family: 'Bangers', cursive;
+    display: block;
+    font-size: 30px;
+    background-color: rgb(216, 155, 89);
+    width: 500px;
+    border-radius: 18px;
+    margin-top:50px;
+    margin-bottom: 50px;
 }
 
+/* Mobile */
+@media only screen and (max-width:1250px){
+
+
+    
+}
