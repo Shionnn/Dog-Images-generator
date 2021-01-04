@@ -1,6 +1,6 @@
 # ID_S10204765_Chow_Keng_Shion_ASSG2_Website
-# Assignment 2
-## Your Project's Name
+## Assignment 2
+### The Dog Generator
 One or two paragraphs providing an overview of your project. Tell us about your project.
 
 Essentially, this part is your sales pitch.

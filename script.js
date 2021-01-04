@@ -59,7 +59,9 @@ if (validateForm() != false){
       else {
 
         alert("The breed you searched for is not available! Try again!")
-        
+        document.getElementById('doginfo').remove();
+        var frame = document.getElementById("iframe");
+        frame.parentNode.removeChild(frame);
       }
       })
       .then(data=>{
