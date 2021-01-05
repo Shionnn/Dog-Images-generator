@@ -107,13 +107,16 @@ console.log(iframe)
 document.getElementById('Span1').style.textDecoration = "underline";
 // show the given page, hide the rest
 function show(elementID,spanID) {
+  // auto scrolls the screen to the top whenever user clicks views another page
+  var element_to_scroll_to = document.getElementById('toppage');
+  element_to_scroll_to.scrollIntoView();
   // try to find the requested page and alert if it's not found
   var ele = document.getElementById(elementID);
   var span = document.getElementById(spanID)
   if (!ele) {
       alert("no such element");
       return;
-  }
+ }
   
 
   // get all pages, loop through them and hide them
@@ -127,6 +130,7 @@ function show(elementID,spanID) {
   // then show the requested page
   ele.style.display = 'block';
   span.style.textDecoration = "underline";
+
 
 }
 
@@ -252,6 +256,3 @@ document.addEventListener("click", function (e) {
 autocomplete(document.getElementById("search"), array);
   })
 
-  $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 1000, function() {
-    $(this).animate({ scrollTop: 0 }, 1000);
-});
