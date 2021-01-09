@@ -87,9 +87,7 @@ body{
     margin:10px;
     display: flex;
     flex-wrap:wrap;
-    margin-bottom:100px;
-    
-    
+    margin-bottom:100px;  
 }
 #dogs1{
     display: flex;
