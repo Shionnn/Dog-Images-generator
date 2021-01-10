@@ -45,3 +45,6 @@ Multi-page on single html - https://stackoverflow.com/questions/19289105/multipl
 Auto-Scrolling - https://stackoverflow.com/questions/3163615/how-to-scroll-html-page-to-given-anchor
 Auto-complete function - https://www.w3schools.com/howto/howto_js_autocomplete.asp
 Styling on website such as search bar - https://getbootstrap.com/
+
+## Demo video
+https://youtu.be/x_ZUa2_0HDM
