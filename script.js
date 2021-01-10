@@ -57,7 +57,7 @@ if (validateForm() != false){
         return response.json();
       }
       else {
-
+        //error catching
         alert("The breed you searched for is not available! Try again!")
         document.getElementById('doginfo').remove();
         var frame = document.getElementById("iframe");
@@ -82,7 +82,11 @@ if (validateForm() != false){
   }
   
 }
+
+//Creating iframe for wikipedia
 const breed = document.getElementById("search").value;
+
+//The wikipedia searches with the raw input hence this is needed for the wiki to work properly(unfinished)
 if (breed == "african"){
   forwiki = "african_wild_dog"
 }
@@ -104,6 +108,7 @@ console.log(iframe)
 
 });
 
+//Page 1 default underlined page number
 document.getElementById('Span1').style.textDecoration = "underline";
 // show the given page, hide the rest
 function show(elementID,spanID) {
@@ -137,8 +142,6 @@ function show(elementID,spanID) {
 //retrieve api data and put into array for autocomplete function
 var array = []
 var i = 0;
-
-
 fetch('https://dog.ceo/api/breeds/list/all')
 .then(response=>response.json())
 .then(data=>{
@@ -253,6 +256,7 @@ document.addEventListener("click", function (e) {
 });
 }
 
+//calling the function
 autocomplete(document.getElementById("search"), array);
   })
 

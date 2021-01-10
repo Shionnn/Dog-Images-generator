@@ -10,6 +10,7 @@ header{
     font-size: 70px;
 }
 
+/* Dogpaw icon  */
 #icon-left img{
     position: absolute;
     top:37px;
@@ -27,6 +28,7 @@ header{
 
 }
 
+/* Dog running gif */
 #dogrun-container-left{
     position: absolute;
     top:18px;
@@ -175,7 +177,7 @@ background-color: DodgerBlue !important;
 color: #ffffff;
 }
 
-
+/* the wikipedia */
 #iframe {
     margin:auto;
     height:900px;
