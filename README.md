@@ -1,5 +1,3 @@
-# ID_S10204765_Chow_Keng_Shion_ASSG2_Website
-## Assignment 2
 ### The Dog Generator
 Have you ever wanted to get a pet dog? or are you feeling down and want to look at pictures of dogs to cheer you up? because I do and that is why i decided to make a website to view pictures of dogs by their breeds. The website fetches pictures of dogs from the dog api according to what the user input is.
 
